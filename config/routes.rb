@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   get  '/about', to: 'static_pages#about'
   get  '/contact', to: 'static_pages#contact'
 
-  resources :users, :except => [:index, :new, :create]
+  resources :users, :except => [:new, :create]
 
   root 'static_pages#home'
 end
