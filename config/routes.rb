@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get  '/contact', to: 'static_pages#contact'
 
   resources :users, :except => [:new, :create]
+  resources :account_activations, only: [:edit]
 
   root 'static_pages#home'
 end
