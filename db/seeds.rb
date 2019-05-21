@@ -23,3 +23,9 @@ User.create!(name:  name,
     activated_at: Time.zone.now
 )
 end
+
+30.times do |n|
+  content = Faker::Company.bs
+  Micropost.create content: content,
+              user: User.find(rand(99)+2)
+end

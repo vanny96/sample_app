@@ -18,6 +18,8 @@ Rails.application.routes.draw do
   resources :users, :except => [:new, :create]
   resources :account_activations, only: [:edit]
   resources :password_resets, except: [:index, :destroy, :show]
+  resources :microposts,          only: [:create, :destroy]
+
 
   root 'static_pages#home'
 end
